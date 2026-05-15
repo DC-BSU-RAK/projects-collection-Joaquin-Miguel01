@@ -1,0 +1,325 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/ice_cream_wallpaper"
+    tools:context=".MainActivity" >
+
+    <ImageButton
+        android:id="@+id/btn_chocolate"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.051"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn_cone"
+        app:layout_constraintVertical_bias="0.112"
+        app:srcCompat="@drawable/chocolate_icon" />
+
+    <ImageButton
+        android:id="@+id/btn_mango"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginBottom="276dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.051"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn_chocolate"
+        app:layout_constraintVertical_bias="1.0"
+        app:srcCompat="@drawable/mango_icon" />
+
+    <ImageButton
+        android:id="@+id/btn_strawberry"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.051"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn_mango"
+        app:layout_constraintVertical_bias="0.34"
+        app:srcCompat="@drawable/strawberry_icon" />
+
+    <ImageButton
+        android:id="@+id/btn_fudge_drizzle"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.133"
+        app:layout_constraintStart_toEndOf="@+id/btn_chocolate"
+        app:layout_constraintTop_toBottomOf="@+id/btn_cup"
+        app:layout_constraintVertical_bias="0.112"
+        app:srcCompat="@drawable/fudge_drizzle_icon" />
+
+    <ImageButton
+        android:id="@+id/btn_cherry"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginBottom="60dp"
+        app:layout_constraintBottom_toTopOf="@+id/btn_sprinkles"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.133"
+        app:layout_constraintStart_toEndOf="@+id/btn_mango"
+        app:layout_constraintTop_toBottomOf="@+id/btn_fudge_drizzle"
+        app:layout_constraintVertical_bias="1.0"
+        app:srcCompat="@drawable/cherry_icon" />
+
+    <ImageButton
+        android:id="@+id/btn_sprinkles"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginBottom="116dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.133"
+        app:layout_constraintStart_toEndOf="@+id/btn_strawberry"
+        app:srcCompat="@drawable/sprinkles_icon" />
+
+    <ImageButton
+        android:id="@+id/btn_cup"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginEnd="168dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.063"
+        app:srcCompat="@drawable/cup_icon" />
+
+    <ImageButton
+        android:id="@+id/btn_cone"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/btn_cup"
+        app:layout_constraintHorizontal_bias="0.372"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.063"
+        app:srcCompat="@drawable/cone_icon" />
+
+    <Button
+        android:id="@+id/btn_eat"
+        android:layout_width="wrap_content"
+        android:layout_height="60dp"
+        android:text="Eat Sundae!"
+        android:textColor="#FFFFFF"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:backgroundTint="#D32F2F"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_margin="24dp"
+        app:cornerRadius="30dp" />
+
+    <FrameLayout
+        android:layout_width="146dp"
+        android:layout_height="359dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.939"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.438">
+
+        <ImageView
+            android:id="@+id/display_base"
+            android:layout_width="match_parent"
+            android:layout_height="262dp"
+            android:layout_gravity="bottom|center_horizontal"
+            android:visibility="gone"
+            app:srcCompat="@drawable/cone" />
+
+        <ImageView
+            android:id="@+id/display_flavor"
+            android:layout_width="145dp"
+            android:layout_height="314dp"
+            android:layout_gravity="center_horizontal|top"
+            android:visibility="gone"
+            app:srcCompat="@drawable/chocolate" />
+
+        <ImageView
+            android:id="@+id/display_sprinkles"
+            android:layout_width="145dp"
+            android:layout_height="298dp"
+            android:layout_gravity="center_horizontal|top"
+            android:visibility="gone"
+            app:srcCompat="@drawable/sprinkles" />
+
+
+        <ImageView
+            android:id="@+id/display_fudge_drizzle"
+            android:layout_width="match_parent"
+            android:layout_height="299dp"
+            android:layout_gravity="center_horizontal|top"
+            android:visibility="gone"
+            app:srcCompat="@drawable/fudge_drizzle" />
+
+        <ImageView
+            android:id="@+id/display_cherry"
+            android:layout_width="match_parent"
+            android:layout_height="146dp"
+            android:visibility="gone"
+            app:srcCompat="@drawable/cherry" />
+
+    </FrameLayout>
+
+    <TextView
+        android:id="@+id/cone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Cone"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/btn_chocolate"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.12"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn_cone"
+        app:layout_constraintVertical_bias="0.071" />
+
+    <TextView
+        android:id="@+id/cup"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Cup"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/btn_fudge_drizzle"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.466"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn_cup"
+        app:layout_constraintVertical_bias="0.071" />
+
+    <TextView
+        android:id="@+id/chocolate"
+        android:layout_width="85dp"
+        android:layout_height="wrap_content"
+        android:text="Chocolate"
+        android:textSize="17sp"
+        app:layout_constraintBottom_toTopOf="@+id/btn_mango"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.085"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn_chocolate"
+        app:layout_constraintVertical_bias="0.088" />
+
+    <TextView
+        android:id="@+id/mango"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Mango"
+        android:textSize="17sp"
+        app:layout_constraintBottom_toTopOf="@+id/btn_strawberry"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.122"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn_mango"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/strawberry"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Strawberry"
+        android:textSize="17sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.094"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn_strawberry"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/fudge"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Fudge Drizzle"
+        android:textSize="17sp"
+        app:layout_constraintBottom_toTopOf="@+id/btn_cherry"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.454"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn_fudge_drizzle"
+        app:layout_constraintVertical_bias="0.081" />
+
+    <TextView
+        android:id="@+id/cherry"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Cherry"
+        android:textSize="17sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.465"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn_cherry"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/sprinkles"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="80dp"
+        android:text="Sprinkles"
+        android:textSize="17sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.46"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn_sprinkles"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/info_card"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="30dp"
+        app:cardCornerRadius="24dp"
+        app:cardElevation="12dp"
+        app:cardBackgroundColor="#FFFDD0"
+        android:translationY="1000dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="24dp"
+            android:gravity="center">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Welcome to Sundae Studio"
+                android:textSize="22sp"
+                android:textStyle="bold"
+                android:textColor="#333333" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:text="Create your ice cream step-by-step:\n\n1. Pick a Container\n2. Select a Flavor\n3. Add a Topping"
+                android:lineSpacingExtra="4dp"
+                android:gravity="center"
+                android:textColor="#666666" />
+
+            <Button
+                android:id="@+id/btn_close_info"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="Start Creating"
+                android:backgroundTint="#FF4081" />
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
